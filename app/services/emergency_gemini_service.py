@@ -1,5 +1,5 @@
 from flask import current_app
-import sys
+import sys  #Imports Python’s system module
 
 def emergency_ai_response(prompt: str) -> str:
     model = getattr(current_app, "gemini_model", None)
