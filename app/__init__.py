@@ -8,10 +8,9 @@ import google.generativeai as genai
 
 from app.extensions import db, jwt
 from app.routes.main_routes import main_bp
-from app.routes.auth_routes import auth_bp
+from  app.routes.auth_routes import auth_bp
 from app.routes.symptom_routes import symptom_bp
 from app.routes.emergency_chat_routes import emergency_chat_bp
-
 
 def create_app():
     # -----------------------
@@ -96,6 +95,8 @@ def create_app():
     # -----------------------
     # Health check
     # -----------------------
+
+    
     @app.route("/health")
     def health():
         return {
