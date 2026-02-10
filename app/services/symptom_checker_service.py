@@ -1,7 +1,7 @@
-import google.generativeai as genai
-import os
+import google.generativeai as genai #google.generativeai → Google’s Gemini SDK (used to call Gemini models)
+import os #os → lets you read environment variables like API keys
 
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = os.getenv("GEMINI_API_KEY") #Reads GEMINI_API_KEY from your system environment. If it exists → real Gemini API can be used. If not → you should fall back to mock mode
 if not api_key:
     FORCE_MOCK_MODE = True
 else:
